@@ -45,7 +45,7 @@ def env(env_type, mode, key=None, value=None, writemode=1):
                 raise EnvNotFundError("")
             loop = 0
             for i in lists:
-                if lists == key:
+                if i == key:
                     break
                 loop += 1
             return winreg.EnumValue(wr, loop)[1]
