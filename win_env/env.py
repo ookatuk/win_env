@@ -42,9 +42,8 @@ def env(env_type, mode, key=None, value=None, writemode=1):
             loop = 0
             for i in lists:
                 if lists == key:
-                    break
+                    return winreg.EnumValue(wr, loop)[1]
                     loop += 1
-            return winreg.EnumValue(wr, loop)[1]
         elif mode == "set":
             with winreg.CreateKeyEx(
                 keys[0],
