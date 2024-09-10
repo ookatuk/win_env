@@ -36,7 +36,7 @@ def env(env_type, mode, key=None, value=None, writemode=1):
             return values
         elif mode == "get":
             values = ""
-            lists = env("system", "list")
+            lists = env(env_type, "list")
             if key not in lists:
                 raise EnvNotFundError("")
             loop = 0
