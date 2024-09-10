@@ -2,7 +2,7 @@ import winreg
 
 class EnvNotFundError(FileNotFoundError):
     def __init__(self, *args):
-        return ("".join(args))
+        print("".join(args))
 
 
 def env(env_type, mode, key=None, value=None, writemode=1):
