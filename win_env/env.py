@@ -11,7 +11,7 @@ def env(env_type, mode, key=None, value=None, writemode=1):
     システム環境変数かユーザー環境変数を取得・設定します。
     :writemode: 1か2で指定してください。1は単純な文字列などに使用し、場所や複数個の場合は2を指定してください。
     :env_type: ユーザー環境変数(user)かシステム環境変数(system)か揮発性環境変数(volatile)を"str"型で指定します。
-    :mode: list(一覧表示), get(値取得), set(設定)から選んでね
+    :mode: list(一覧表示), get(値取得), set(設定)から選んでね。setは管理者で実行してください。
     :key: 引数(mode)がgetかsetの場合に使用。キーを指定してください。
     :value: 引数(mode)がsetの場合に使用。値を指定してください。
     :return: 引数(mode)がlistなら環境変数をリストにして返して、getはそれに対応する値、setはありません。
