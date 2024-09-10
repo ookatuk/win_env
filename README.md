@@ -48,5 +48,6 @@ Writes an environment variable named key as value.
 Note: Please run as administrator.
 
 ## Install
-
+```
 pip install git+https://github.com/akino11/win_env.git
+```
