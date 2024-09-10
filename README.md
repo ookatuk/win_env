@@ -45,6 +45,7 @@ Displays the contents of the environment variable named key.
 #### win_env(env_type, "set", key, value, write_mode)
 
 Writes an environment variable named key as value.
+Note: Please run as administrator.
 
 ## Install
 
