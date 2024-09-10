@@ -35,14 +35,14 @@ There seems to be a bug in Windows so it may not work properly.
 
 ### command
 
-#### win_env.env(env_type, "list")
+#### ```win_env.env(env_type, "list")```
   Lists the contents of the environment variables.
 
-#### win_env.env(env_type, "get" key)
+#### ```win_env.env(env_type, "get" key)```
 
 Displays the contents of the environment variable named key.
 
-#### win_env(env_type, "set", key, value, write_mode)
+#### ```win_env(env_type, "set", key, value, write_mode)```
 
 Writes an environment variable named key as value.
 Note: Please run as administrator.
