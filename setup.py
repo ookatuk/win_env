@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 
 setuptools.setup(
-    name="ookatuk",
+    name="win_env",
     version="1.0.0",
     install_requires = requirements,
     entry_points={
@@ -15,7 +15,7 @@ setuptools.setup(
     },
     packages=setuptools.find_packages(),
     description="sample packages by legacy-setup.py",
-    author="author",
-    # author_email="sample@example.com",
-    python_requires='>=3.21',
+    author="ookatuk",
+    author_email="okatuhumi@gmail.com",
+    python_requires='>=3.12.3',
 )
