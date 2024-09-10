@@ -49,4 +49,4 @@ Note: Please run as administrator.
 
 ## Install
 
-pip install win_env
+pip install git+https://github.com/akino11/win_env.git
