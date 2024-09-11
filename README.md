@@ -1,4 +1,4 @@
-# win_env
+# win_env 1.0.1
 
 This is a library that allows you to display and set Windows system environment variables and user environment variables.
 
@@ -10,15 +10,15 @@ This module uses the winreg module to edit the location of environment variables
 
 ### env_type
 
-#### user
+#### ```win_env.user```
 
 Specifies the user environment variables.
 
-#### system
+#### ```win_env.systems```
 
 Specifies the system environment variables.
 
-### volatile (beta)
+### ```win_env.volatile``` (beta)
 
 Specifies a volatile environment variable.
 There seems to be a bug in Windows so it may not work properly.
@@ -35,19 +35,38 @@ There seems to be a bug in Windows so it may not work properly.
 
 ### command
 
-#### ```win_env.env(env_type, "list")```
+#### ```win_env.lists(env_type)```
   Lists the contents of the environment variables.
 
-#### ```win_env.env(env_type, "get" key)```
+#### ```win_env.get(env_type, key)```
 
 Displays the contents of the environment variable named key.
 
-#### ```win_env(env_type, "set", key, value, write_mode)```
+#### ```win_env.set(env_type, key, value, write_mode)```
 
-Writes an environment variable named key as value.
-Note: Please run as administrator.
+Write the environment variables.
 
-## Install
-```
-pip install git+https://github.com/akino11/win_env.git
-```
+Note: Run as administrator to write system environment variables.
+
+#### ```win_env.all_list()```
+
+Returns all environment variables as a dictionary+list.
+
+#### ```win_env.dels(env_type, key)```
+
+Removes an environment variable. Returns Env NotFoundError of the environment variable does not exist.
+
+Note: Admin privileges are required for system environment variables.
+
+#### ```win_env.add(env_type, key, value, write_mode)```
+
+Adds the environment variable if it doesn't exist, raises an EnvError if it does exist.
+
+## How to install
+
+
+Run
+
+```pip install git+https://github.com/akino11/win_env.git```
+
+in the command prompt.
