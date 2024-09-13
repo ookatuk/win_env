@@ -1,4 +1,4 @@
-# win_env 1.0.1
+# win_env 1.0.2
 
 This is a library that allows you to display and set Windows system environment variables and user environment variables.
 
@@ -18,6 +18,13 @@ Specifies the user environment variables.
 
 Specifies the system environment variables.
 
+#### ```win_env.custom```
+
+Think of it as a carry-over variable.
+It's stored in a Registry so it can be easily seen from outside.
+
+Registry location: ```HKEY_CURRENT_USER\Software\python-lib\3.12\win_env\custom_env```
+
 #### ```win_env.volatile``` (beta)
 
 Specifies a volatile environment variable.
@@ -33,10 +40,45 @@ There seems to be a bug in Windows so it may not work properly.
 
   Specify 2 to specify location or list format, written as REG_EXPAND_SZ.
 
-### command
+### Multiple Placement Commands
 
-#### ```win_env.lists(env_type)```
+#### ```win_env.open(env_type)```
+
+You can use either a variable or with.
+
+Available commands
+
+##### ```list(only=None)```
+
+Same as list command
+
+##### ```get(key)```
+
+Same as get command
+
+##### ```set(key, value, write_mode=1)```
+
+Same as set command
+
+##### ```dels(key)```
+
+Same as dels command
+
+##### ```add(key, value, write_mode=1)```
+
+Same as add command
+
+### Single command
+
+#### ```win_env.list(env_type, only=None)```
   Lists the contents of the environment variables.
+
+Only args: False will return a list of just the values, True will return just the keys, None will return both.
+
+#### only
+
+False returns a list of only the values. True returns only the keys.
+defolt = None
 
 #### ```win_env.get(env_type, key)```
 
@@ -60,12 +102,10 @@ Note: Admin privileges are required for system environment variables.
 
 #### ```win_env.add(env_type, key, value, write_mode)```
 
+
 Adds the environment variable if it doesn't exist, raises an EnvError if it does exist.
 
 ## How to install
-
-
-Run
 
 ```pip install git+https://github.com/akino11/win_env.git```
 
