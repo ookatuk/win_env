@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="win_env",
-    version="1.0.1",
+    version="1.0.2",
     install_requires = requirements,
     entry_points={
         'console_scripts': [
