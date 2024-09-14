@@ -1,4 +1,4 @@
-# win_env 1.1.1
+# win_all_env 1.1.3
 
 This is a library that allows you to display and set Windows system environment variables and user environment variables.
 
@@ -114,7 +114,3 @@ or
 ```pip install win_all_env```
 
 in the command prompt.
-
-## Link
-
-https://pypi.org/project/win-all-env/
