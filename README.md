@@ -1,4 +1,4 @@
-# win_env 1.0.2
+# win_env 1.1.1
 
 This is a library that allows you to display and set Windows system environment variables and user environment variables.
 
@@ -108,5 +108,7 @@ Adds the environment variable if it doesn't exist, raises an EnvError if it does
 ## How to install
 
 ```pip install git+https://github.com/akino11/win_env.git```
+or
+```pip install win_all_env```
 
 in the command prompt.
