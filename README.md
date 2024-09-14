@@ -108,7 +108,9 @@ Adds the environment variable if it doesn't exist, raises an EnvError if it does
 ## How to install
 
 ```pip install git+https://github.com/akino11/win_env.git```
+
 or
+
 ```pip install win_all_env```
 
 in the command prompt.
