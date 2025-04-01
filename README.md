@@ -107,7 +107,7 @@ Adds the environment variable if it doesn't exist, raises an EnvError if it does
 
 ## How to install
 
-```pip install git+https://github.com/akino11/win_env.git```
+```pip install git+https://github.com/ookatuk/win_env.git```
 
 or
 
